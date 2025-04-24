@@ -1,1 +1,1 @@
-A site for earning the digital PEPE currency, and its programming uses html, css, javascript, and bootstrap.
+A site for earning the digital PEPE currency, and its programming uses html, css, and bootstrap.
