@@ -1,0 +1,763 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="وصف قصير للموقع.">
+    <meta name="keywords" content="كلمة مفتاحية 1, كلمة مفتاحية 2, كلمة مفتاحية 3">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"/>
+    <link rel="icon" href="https://img.icons8.com/?size=256&id=63306&format=png" type="image/png">
+
+    <style>
+      *{
+        font-family: Poppins;
+      }
+        body {
+          /* background-image: url('https://i.ibb.co/5XCLfNLG/background2.webp');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed; 
+          background-repeat: no-repeat; */
+          background-color:#1d2024;
+          /* background-image: linear-gradient(to right,rgb(0, 0, 0),rgb(4, 73, 19)); */
+        }
+        iframe{
+      display:none !important;
+      }
+        footer{
+          width: auto;
+          height: 50px;
+          color: white;
+          padding-top: 10px;
+        }
+
+        .tt{
+            color: white;
+        }
+        .nav-item {display: flex;
+          align-items: center;
+          font-size: 22px !important;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        .carousel{
+          margin: 5px;
+          /* top: -50px; */
+        }
+        #carouselExampleDark {
+    height: 75vh; /* 50% من ارتفاع الشاشة */
+  }
+
+  #carouselExampleDark .carousel-inner,
+  #carouselExampleDark .carousel-item,
+  #carouselExampleDark .carousel-item img {
+    height: 100%;
+    
+    object-fit: contain; /* لتعبئة الصورة داخل الإطار بشكل مناسب */
+  }
+
+        .offcanvas-body{
+          position: relative;
+        }
+        .nav-community{
+          position: absolute;
+          text-align: center;
+          bottom: 0;
+          margin-bottom: 10px;
+        }
+        .nav-link{
+          margin-left: 10px;
+        }
+        .card-group{
+          padding: 10px;
+          width: 70%;
+         display: grid;
+         grid-template-columns: repeat(3,1fr);
+         gap: 10px;  
+        }
+        .MainCard{
+          padding: 5px;
+          display: flex;
+          flex-direction: row;
+        }
+        .imgCard{
+          margin-top: 75px;
+          width: 40%;
+          height: 40%;
+        }
+       .card{
+          padding: 5px !important;
+          text-align: center !important;
+          align-items: center !important;
+          border: 2px !important;
+          border-radius: 5% !important;
+          border-color: rgb(0, 0, 0) ;
+          border-style: solid !important;
+          box-shadow: 5px 5px 15px -3px rgba(0, 0, 0, 0.5);
+          transition: 1s;
+        }
+        .card:hover{
+         background-color:#1c1f22;
+         border: 3px !important;
+         border-radius: 5% !important;
+          border-style: solid !important;
+          color: white;
+         border-color:#f44336 !important;
+        }
+        .card-img-top{
+          width: 150px !important;
+          height: 150px !important;
+        }
+        .Download{
+          width: 30%;
+            height: 100%;
+            margin-top: 10px;
+            -webkit-animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        
+        }
+        body{
+            margin-top:4% !important;
+            padding-top: 5%;
+        }
+        .Download .phone{
+           margin: 10% 10%;
+        }
+        .btnD{
+          padding: 2px 0px;
+          text-align: start;
+            margin-top: 7px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 20px;
+            -webkit-animation: bounce-top 2s both;
+            animation: bounce-top 2s both;
+            transition: 1s;
+        }
+        .btnD:hover{
+          color: white;
+          border: 3px solid #f44336;
+            border-radius: 20px;
+          background-color: rgb(0, 0, 0);
+          box-shadow: 6px 6px 15px -1px rgba(255, 255, 255, 0.623);
+        }
+        .btnD img{
+          text-align: center;
+          align-items: center;
+          /* margin: 2px 0px; */
+          opacity: 0;
+          transform: translateX(-50%);
+          transition: 1s;
+        }
+        .btnD:hover img{
+          opacity: 1;
+         transform: translateX(0%);
+        }
+       .profitApp{
+        /* background-color: aqua;
+        border: 2px black solid;
+        border-radius: 50px;
+        padding: 10px;
+        transition: 2s; */
+        text-align: center;
+       }
+       /* .profitApp:hover{
+        background-color: rgb(7, 114, 114);
+        border: 2px black solid;
+        border-radius: 50px;
+        padding: 10px;
+       } */
+
+       .quest{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-top: 5px;
+       }
+       .Community{
+        padding-left: 10px;
+        padding-top: 10px;
+        text-align: center;
+       }
+       .icSocial{
+        margin: 10px;
+       }
+       .timeline {
+        margin-right: 10px;
+            position: relative;
+            float: right;
+            margin-top: 30px;
+            /* top: -50px; */
+            width: 30%;
+        }
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #ccc;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: "";
+            width: 14px;
+            height: 14px;
+            background-color: white;
+            border: 3px solid #ff5252;
+            border-radius: 50%;
+            position: absolute;
+            left: 14px;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0);
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 40px;
+            position: relative;
+            font-size: 0px;
+            transition: 1s;
+        }
+        .content:hover{
+            background-color: rgba(255, 255, 255, 0.89);
+            font-size: medium;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 40px;
+            position: relative;
+        }
+        .content h3 {
+            margin: 0;
+            padding: 5px 10px;
+            color: white;
+            border-radius: 3px;
+        }
+        .blue { background-color: #2d3e50; }
+        .red { background-color: #ff5252; }
+        .yellow { background-color: #fbc02d; }
+        .green{ background-color: green }
+        .navbar-brand{
+          -webkit-animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        .Faq{
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          text-align: center;
+          margin: 5px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: rgb(255, 255, 255);
+          box-shadow: 5px 5px 15px -3px rgba(0, 0, 0, 0.6);
+          transition: 1s;
+        }
+
+        .Faq:hover{
+            background-color:#1c1f22;
+         border: 3px !important;
+         border-radius: 10px !important;
+          border-style: solid !important;
+          color: white;
+         border-color:#f44336 !important;
+
+        }
+       
+        .accordion{
+          width: 70%;
+          float: right;
+        }
+        
+        .accordion-button{
+          color: white !important;
+          border-radius: 20px !important;
+          /* background-image: linear-gradient(to right,rgb(32, 4, 160),rgb(162, 0, 255)) !important; */
+           background-image: linear-gradient(to right,rgb(24, 23, 26),rgb(196, 51, 51)) !important; 
+        }
+
+        .accordion-item{
+         margin-bottom: 20px;
+         border-radius: 20px !important;
+         color:  white;
+         background-color: #1c1f22;
+        }
+       
+
+        ::-webkit-scrollbar {
+    width: 12px;  /* عرض الشريط الجانبي */
+    height: 12px; /* ارتفاع الشريط الجانبي (في حالة الشريط الأفقي) */
+}
+        /* تخصيص الممر (track) داخل الشريط الجانبي */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* لون الخلفية للممر */
+    border-radius: 10px; /* زاوية دائرية للممر */
+}
+
+/* تخصيص المقبض (thumb) داخل الشريط الجانبي */
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* لون المقبض */
+    border-radius: 10px; /* زاوية دائرية للمقبض */
+    border: 3px solid #f1f1f1; /* إضافة حدود حول المقبض */
+}
+
+/* تخصيص المقبض عند المرور فوقه */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #222222; /* تغيير لون المقبض عند المرور فوقه */
+}
+
+        /* navbar-brand_Animation */
+
+ @-webkit-keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(12px);
+            transform: translateZ(12px);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(12px);
+            transform: translateZ(12px);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+         /* Endnavbar-brand_Animation */
+
+/* btnD_animation */
+
+ @-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
+/* EndbtnD_animation */
+      </style>
+
+
+</head>
+
+  <body>
+    
+     <!-- navBar# -->
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+          <div class="container-fluid">
+            <img src="site-logo.jpg" alt="Site Logo" width="40px" height="40px" class="me-2">
+              <button class="navbar-toggler me-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+               <a class="navbar-brand" href="#">TestApp</a>
+              <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                  <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <img src="https://img.icons8.com/?size=64&id=42814&format=png" alt="" srcset="" width="35px" height="35px"><a class="nav-link" aria-current="page" href="#carouselExampleDark">Home Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <img src="https://img.icons8.com/?size=48&id=13013&format=png" alt="" srcset="" width="35px" height="35px"> <a class="nav-link" href="#profitApp">Application features</a>
+                        </li>
+                        <li class="nav-item">
+                            <img src="https://img.icons8.com/?size=40&id=21174&format=png" alt="" srcset="" width="35px" height="35px"><a class="nav-link" href="#FAQ">Frequently Asked Questions</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <img src="https://img.icons8.com/?size=64&id=118963&format=png" alt="" srcset="" width="35px" height="35px"><a class="nav-link" href="bounty.html" target="_blank">Free Bounty</a>
+                        </li>
+
+                      <li class="nav-item">
+                        <img src="https://img.icons8.com/?size=48&id=11947&format=png" alt="" srcset="" width="35px" height="35px"><a class="nav-link" href="#">Support team</a>
+                  </li>
+
+                    </ul>
+                    <div class="nav-community">
+                     <!-- Community -->
+
+    <div class="social-link">
+
+    <a href="https://t.me/onexbitcoins" target="_blank" class="icSocial"><img src="https://img.icons8.com/?size=256&id=63306&format=png" alt="Telegram" width="40px" height="40px"></a>
+    
+    <a href="" target="_blank" class="icSocial"><img src="https://img.icons8.com/?size=256&id=118497&format=png" alt="facebook" width="40px" height="40px" ></a>
+    
+    <a href="" target="_blank" class="icSocial"><img src="https://img.icons8.com/?size=256&id=13963&format=png" alt="twitter" width="40px" height="40px" ></a>
+    
+    <a href="" target="_blank" class="icSocial"><img src="https://img.icons8.com/?size=256&id=19318&format=png" alt="Youtube" width="40px" height="40px"></a>
+   
+    <a href="" target="_blank" class="icSocial"><img src="https://img.icons8.com/?size=256&id=16713&format=png" alt="whatsApp" width="40px" height="40px"></a>
+
+</div>
+<!-- EndCommunity -->
+                     </div>
+                </div>
+              </div>
+          </div>
+      </nav>
+      
+  <!-- EndNavBar# -->
+
+  <!-- images -->
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img src="phone.jpg" class="d-block w-100" alt="phone.jpg">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="phone.jpg" class="d-block w-100" alt="phone.jpg">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="phone.jpg" class="d-block w-100" alt="phone.jpg">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+   <!-- EndImages -->
+
+    <!-- About -->
+    <div class="timeline" id="home">
+      <div class="timeline-item">
+          <div class="content">
+              <h3 class="blue">Create An Account</h3>
+              <p>Create An Account. More Earning & More Enjoy!</p>
+          </div>
+      </div>
+      <div class="timeline-item">
+          <div class="content">
+              <h3 class="yellow">Login</h3>
+              <p>Get Login Bonus!</p>
+          </div>
+      </div>
+      <div class="timeline-item">
+          <div class="content">
+              <h3 class="red">Boost Your Earning</h3>
+              <p>Crypto Is Very Easy To Earn! Like In Our Website, Just Join, Do Simple Tasks And Earn!</p>
+          </div>
+      </div>
+      <div class="timeline-item">
+        <div class="content">
+            <h3 class="green">green Your Earning</h3>
+            <p>Crypto pepe green Is Very Easy To Earn! Like In Our Website, Just Join, Do Simple Tasks And Earn!</p>
+        </div>
+    </div>
+
+  </div>
+     <!-- EndAbout -->
+
+    <!-- Download -->
+    <div class="Download" >
+        <div class="phone">
+        <img src="phone.jpg" alt="no image" width="200px" height="300px">
+        <br>
+    <a href="#" target="_blank" rel="noopener noreferrer">
+      <button class="btnD" type="button">
+        <img  src="https://img.icons8.com/?size=256&id=17836&format=png" alt="ic_button" width="25px" height="25px" >
+         Download APK 
+        </button></a>
+
+  </div>
+    </div>
+     <!-- EndDownload -->
+      
+    
+
+<!-- Card# -->
+<h1 class="profitApp tt" id="profitApp"> <u>Application features</u></h1>
+ <div class="MainCard">
+<div class="card-group">
+
+    <div class="card">
+      <img src="https://cdn.faucetpay.io/coins/pepe.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Spin Wheel</h5>
+        <p class="card-text">earn spin wheel 10 pepe to 1000 pepe</p>
+        
+    </div>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn.faucetpay.io/coins/pepe.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Ads Video Reward</h5>
+        <p class="card-text">watch video Ads to earn 50 pepe</p>
+        
+    </div>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn.faucetpay.io/coins/pepe.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Bounty</h5>
+        <p class="card-text">compelte task bounty from video Youtube and rate TrustPilot</p>
+        
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn.faucetpay.io/coins/pepe.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">test</h5>
+        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, expedita.</p>
+        
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn.faucetpay.io/coins/pepe.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">test</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur enim molestiae ipsa deserunt!</p>
+        
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn.faucetpay.io/coins/pepe.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Bounty2</h5>
+        <p class="card-text">compelte2 task2 bounty2 from 2video Youtube and rate TrustPilot</p>
+        
+      </div>
+    </div>
+
+  </div>
+  <img class="imgCard" src="phone.jpg" alt="" srcset="">
+</div>
+  <!-- EndCard# -->
+  <!-- Faq -->
+<br>
+   <div class="Faq" id="FAQ">
+  <h1 class="TitleFaq"><u> Frequently Asked Questions</u> </h1>
+
+  <div class="quest">
+<img class="ic_Faq" src="https://criptolia.site/assets/images/home/faq2.webp" alt="" srcset="" width="200px" height="200px">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Accordion Item #3
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFore">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFore" aria-expanded="false" aria-controls="flush-collapseFore">
+            Accordion Item #4
+          </button>
+        </h2>
+        <div id="flush-collapseFore" class="accordion-collapse collapse" aria-labelledby="flush-headingFore" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+   </div>
+
+  <!-- EndFaq -->
+ <!-- Community -->
+ <div class="Community">
+  <div class="footer-list">
+    <h2 class="title tt"> <u>Community</u></h2>
+    <div class="social-link">
+
+    <a href="https://t.me/onexbitcoins" target="_blank" class="icSocial"><img src="https://img.icons8.com/?size=256&id=63306&format=png" alt="Telegram" width="40px" height="40px"></a>
+    
+    <a href="" target="_blank" class="icSocial"><img src="https://img.icons8.com/?size=256&id=118497&format=png" alt="facebook" width="40px" height="40px" ></a>
+    
+    <a href="" target="_blank" class="icSocial"><img src="https://img.icons8.com/?size=256&id=13963&format=png" alt="twitter" width="40px" height="40px" ></a>
+    
+    <a href="" target="_blank" class="icSocial"><img src="https://img.icons8.com/?size=256&id=19318&format=png" alt="Youtube" width="40px" height="40px"></a>
+   
+    <a href="" target="_blank" class="icSocial"><img src="https://img.icons8.com/?size=256&id=16713&format=png" alt="whatsApp" width="40px" height="40px"></a>
+
+  </div>
+  </div>
+
+</div>
+<!-- EndCommunity -->
+ <br>
+<!-- Copyright -->
+<footer class="col-12 text-center bg-dark">
+  <h3 class="copyright"><span id="current-year">2025</span> © Copyright - earn | All Right Reserve</h3>
+</footer>
+<!-- EndCopyright -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
